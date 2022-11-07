@@ -3,11 +3,15 @@
 puts "Deleting old data..."
 Product.destroy_all
 User.destroy_all
+Review.destroy_all
 
 puts "Creating users..."
-user1 = User.create(name: "John")
-user2 = User.create(name: "Andrew")
-user3 = User.create(name: "Felix")
+# user1 = User.create(name: "John")
+# user2 = User.create(name: "Andrew")
+# user3 = User.create(name: "Felix")
+user1 = User.create(name: Faker::Name.name)
+user2 = User.create(name: Faker::Name.name)
+user3 = User.create(name: Faker::Name.name)
 
 puts "Creating products..."
 product1 = Product.create(name: "Stapler", price: 10)
